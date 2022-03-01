@@ -1,6 +1,6 @@
 
 
-interface IProduct {
+export interface IProduct {
   ID: Number,
   Name: String,
   Quantity: Number,
