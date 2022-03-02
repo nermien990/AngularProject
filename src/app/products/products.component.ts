@@ -13,28 +13,34 @@ export class ProductsComponent implements OnInit {
     this.Discount = DiscountOffers['No Discount'];
     this.StoreName = 'Amazon';
     this.StoreLogo = 'assets/images/photo-1.jpg';
-    this.CategoryList = { ID: 3, Name: 'Shoes' };
-    (this.ProductList = {
-      ID: 1,
-      Name: 'nermien',
-      Quantity: 2,
-      Price: 40,
-      Img: 'assets/images/photo-1.jpg',
-    }),
+    this.CategoryList = [
+      { ID: 1, Name: 'Dress' },
+      { ID: 2, Name: 'Hat' },
+      { ID: 3, Name: 'Shoes' },
+    ];
+    this.ProductList = [
       {
         ID: 1,
         Name: 'nermien',
         Quantity: 2,
         Price: 40,
         Img: 'assets/images/photo-1.jpg',
-      };
+      },
+      {
+        ID: 1,
+        Name: 'nermien',
+        Quantity: 2,
+        Price: 40,
+        Img: 'assets/images/photo-1.jpg',
+      },
+    ];
   }
 
   Discount: DiscountOffers;
   StoreName: String;
   StoreLogo: String;
-  ProductList: IProduct;
-  CategoryList: ICategory;
+  ProductList: IProduct[];
+  CategoryList: ICategory[];
   ClientName: String = '';
   IsPurshased: boolean = true;
 
