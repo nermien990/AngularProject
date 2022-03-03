@@ -5,4 +5,35 @@
 <h1>Hello</h1>
 <app-products></app-products>
 
-<!-- <app-lab2></app-lab2> -->
+<button (click)="viewItems()">Display</button>
+
+<div *ngIf="isClicked; then Display"></div>
+<ng-template #Display>
+  <h2>
+    <table
+      style="
+        border: 1px black solid;
+        background-color: antiquewhite;
+        width: 300px;
+        height: 200px;
+      "
+    >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productsList">
+          <td>{{ product.Id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.quentity }}</td>
+          <td>{{ product.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </h2>
+</ng-template>
