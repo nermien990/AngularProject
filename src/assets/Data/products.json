@@ -1,0 +1,22 @@
+[{
+      "ID": 1,
+      "Name": "juket",
+      "Quantity": 2,
+      "Price": 40,
+      "Img": "../images/photo1.jpg"
+    },
+    {
+      "ID": 2,
+      "Name": "back",
+      "Quantity": 2,
+      "Price": 100,
+      "Img": "../images/photo2.jpg"
+    },
+    {
+      "ID": 2,
+      "Name": "shoes",
+      "Quantity": 4,
+      "Price": 600,
+      "Img": "../images/photo3.jpg"
+    }
+  ]

@@ -1,23 +1,13 @@
-<!-- <app-header></app-header>
-<myfirstapp-root></myfirstapp-root> -->
+<app-header></app-header>
 
-<!-- <app-event-binding></app-event-binding> -->
-<h1>Hello</h1>
-<app-products></app-products>
+<!-- <app-products></app-products> -->
 
-<button (click)="viewItems()">Display</button>
+<!-- <button (click)="viewItems()">Display</button>
 
 <div *ngIf="isClicked; then Display"></div>
 <ng-template #Display>
   <h2>
-    <table
-      style="
-        border: 1px black solid;
-        background-color: antiquewhite;
-        width: 300px;
-        height: 200px;
-      "
-    >
+    <table>
       <thead>
         <tr>
           <th>ID</th>
@@ -36,4 +26,7 @@
       </tbody>
     </table>
   </h2>
-</ng-template>
+</ng-template> -->
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

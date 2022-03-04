@@ -39,11 +39,19 @@ export class ProductsComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.ProductList = this.productService.GetAllProducts();
-    this.ProductID = this.productService.GetProductById(1);
+    // this.ProductID = this.productService.GetProductById(1);
+    // this.productService.GetProductById(1).subscribe((data) => {
+    //   this.ProductID = data.ID;
+    // });
+    this.productService.GetAllProducts().subscribe((data) => {
+      this.ProductList = data;
+    });
   }
 
   renderValues() {
-    return (this.ProductList = this.productService.GetAllProducts());
+    // return (this.ProductList = this.productService.GetAllProducts());
+    return this.productService.GetAllProducts().subscribe((data) => {
+      this.ProductList = data;
+    });
   }
 }

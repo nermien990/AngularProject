@@ -1,0 +1,25 @@
+<!-- lab4 -->
+<table
+  style="
+    border: 1px black solid;
+    width: 600px;
+    height: 200px;
+    margin: 10px auto;
+    text-align: center;
+  "
+>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList">
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>

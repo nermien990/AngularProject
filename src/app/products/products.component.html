@@ -1,35 +1,12 @@
-<p>products works!</p>
-
-<h1>{{ StoreName }}</h1>
-<h3 *ngIf="Discount">We offer an explicit discount of {{ Discount }}</h3>
-
-<!-- 1 -->
-<h3 *ngIf="!(Discount == no); then thenBlock; else elseBlock"></h3>
-<ng-template #thenBlock>
-  <h2>We offer an explicit discount of:{{ Discount | percent }}</h2>
-</ng-template>
-<ng-template #elseBlock>
-  <h2>We have no discounts</h2>
-</ng-template>
-<br /><br />
-<!-- 2 -->
-
-<select name="Category">
-  <option *ngFor="let cat of CategoryList">
-    {{ cat.Name }}
-  </option>
-</select>
-<br /><br />
-<!-- 3 -->
-<hr />
-
-<table
+<!-- lab4 -->
+<table 
   style="
-    border: 1px black solid;
-    background-color: antiquewhite;
-    width: 300px;
-    height: 200px;
-  "
+        border: 1px black solid;
+        width: 600px;
+        height: 200px;
+        margin: 10px auto;
+        textAlign: center;
+      "
 >
   <thead>
     <tr>
@@ -37,6 +14,7 @@
       <th>Name</th>
       <th>Quantity</th>
       <th>Price</th>
+      <th>Image</th>
     </tr>
   </thead>
   <tbody>
@@ -45,37 +23,76 @@
       <td>{{ product.Name }}</td>
       <td>{{ product.Quantity }}</td>
       <td>{{ product.Price }}</td>
+      <td>{{ product.Img }}</td>
     </tr>
   </tbody>
 </table>
-<br /><br />
+
+
+<!-- <h1>{{ StoreName }}</h1>
+<h3 *ngIf="Discount">We offer an explicit discount of {{ Discount }}</h3> -->
+
+<!-- 1 -->
+<!-- <h3 *ngIf="!(Discount == no); then thenBlock; else elseBlock"></h3>
+<ng-template #thenBlock>
+  <h2>We offer an explicit discount of:{{ Discount | percent }}</h2>
+</ng-template>
+<ng-template #elseBlock>
+  <h2>We have no discounts</h2>
+</ng-template>
+<br /><br /> -->
+<!-- 2 -->
+<!--
+<select name="Category">
+  <option *ngFor="let cat of CategoryList">
+    {{ cat.Name }}
+  </option>
+</select>
+<br /><br /> -->
+<!-- 3 -->
+<!--
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of ProductList">
+      <td>{{ product.ID }}</td>
+      <td>{{ product.Name }}</td>
+      <td>{{ product.Quantity }}</td>
+      <td>{{ product.Price }}</td>
+      <td>{{ product.Img }}</td>
+    </tr>
+  </tbody>
+</table>
+<br /><br /> -->
 
 <!-- 4 -->
-<input type="text" [(ngModel)]="ClientName" />
-<span> ClientName is: {{ ClientName }}</span>
+<!-- <input type="text" [(ngModel)]="ClientName" />
+<span> ClientName is: {{ ClientName }}</span> -->
 
-<br /><br />
+<!-- <br /><br /> -->
 <!-- 5 -->
-
+<!--
 <input type="button" value="Buy" (click)="isPurchasedChange()" />
 
 <div *ngIf="!IsPurshased; then elseDisplay; else thenDisplay"></div>
 <ng-template #thenDisplay>
   <h2>
-    <table
-      style="
-        border: 1px black solid;
-        background-color: antiquewhite;
-        width: 300px;
-        height: 200px;
-      "
-    >
+    <table>
       <thead>
         <tr>
           <th>ID</th>
           <th>Name</th>
           <th>Quantity</th>
           <th>Price</th>
+          <th>Image</th>
         </tr>
       </thead>
       <tbody>
@@ -93,4 +110,4 @@
 
 <ng-template #elseDisplay>
   <div>Thanks for purchasing from our Store: {{ ClientName }}</div>
-</ng-template>
+</ng-template>  -->
